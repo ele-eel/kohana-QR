@@ -5,15 +5,15 @@ How to use
 1. Get the PHP_QR class library.
 
    PHP_QR Class library
-   http://www.swetake.com/qr/qr_cgi.html
+   http://www.swetake.com/qr/
 
-2. Put files in to a vendor/php_qr directory.
+2. Put files into a vendor/php_qr directory.
 
 3. Edit 'QRCODE_DATA_PATH' in qrcode.php. 
 
    define('QRCODE_DATA_PATH', MODPATH.'qrcode/vendor/qrcode_php/qrcode_data');
 
-4. Enable this module at bootstrap
+4. Enable this module at bootstrap.
 
     'kohana-qr' => MODPATH.'kohana-qr', // QR image module
 
