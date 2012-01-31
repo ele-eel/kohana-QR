@@ -8,9 +8,6 @@ class Controller_QrUrl extends Controller {
 	public function action_encode()
 	{
 		try {
-			//Edit the header content type.
-			$this->request->headers['Content-Type'] = 'image/png';
-
 			//Set config
 			$config = array(
 				'version' => 6,
@@ -18,7 +15,9 @@ class Controller_QrUrl extends Controller {
 				'size' => 2,
 				'quietzone' => 4,
 			);
-			echo QR::factory($config)->render($_GET['url'], 'png');
+			$this->response->headers('content-type','image/png');
+			$this->request->body(QR::factory($config)->render($_GET['url'], 'png'));
+			
 		} catch(ErrorException $e) {
 			echo '';
 		}

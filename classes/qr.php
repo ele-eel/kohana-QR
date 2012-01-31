@@ -1,7 +1,7 @@
 <?php defined('SYSPATH') OR die('No direct access allowed.');
 /**
  * QRcode_php library wrapper
- * for Kohana 3.0.x
+ * for Kohana 3.x
  *
  * @package    Kohana/Kohana-QR
  * @author     ele_eel
