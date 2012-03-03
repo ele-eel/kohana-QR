@@ -7,7 +7,8 @@ class Controller_QrUrl extends Controller {
 
 	public function action_encode()
 	{
-		try {
+		try 
+		{
 			//Set config
 			$config = array(
 				'version' => 6,
@@ -16,9 +17,10 @@ class Controller_QrUrl extends Controller {
 				'quietzone' => 4,
 			);
 			$this->response->headers('content-type','image/png');
-			$this->request->body(QR::factory($config)->render($_GET['url'], 'png'));
-			
-		} catch(ErrorException $e) {
+			$this->response->body(QR::factory($config)->render($_GET['url'], 'png'));
+		}
+		catch(ErrorException $e)
+		{
 			echo '';
 		}
 	}

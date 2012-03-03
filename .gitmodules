@@ -1,0 +1,3 @@
+[submodule "vendor/qr_code"]
+	path = vendor/qr_code
+	url = https://github.com/ele-eel/qr_code

@@ -41,7 +41,7 @@ class QR {
 	 */
 	public function __construct($config)
 	{
-		require_once Kohana::find_file('vendor', 'qrcode_php/qrcode_img');
+		require_once Kohana::find_file('vendor', 'qr_code/qrcode_img');
 		
 		$this->_instance = new Qrcode_image;
 		$this->_instance->set_qrcode_version($config['version']);
